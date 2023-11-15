@@ -2,13 +2,14 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        test1_3();
-        test4();
+        int[] number = new int[]{1, 2, 3};
+        double[] numberArr = new double[]{10.154, 15, 754, 54.410, 154.47};
+
+        test1_3(number,numberArr);
+        test4(number);
     }
 
-    public static void test1_3() {
-        int[] number = new int[]{1, 2, 3, 4};
-        double[] numberArr = new double[]{10.154, 15, 754, 54.410, 154.47};
+    public static void test1_3(int[] number, double[] numberArr) {
 
         System.out.println("           Задача от №1 до №3 ");
         System.out.println("Вывод целочисленного массива с помощю Arrays.toString: ");
@@ -17,7 +18,7 @@ public class Main {
         System.out.println("Вывод  массива c циклом for и запятой: ");
         for (int i : number) {
             System.out.print(i);
-            if (i < 4) {
+            if (i < 3) {
                 System.out.print(", ");
             }
         }
@@ -54,13 +55,12 @@ public class Main {
         System.out.println();
     }
 
-    public static void test4() {
+    public static void test4(int[] number) {
         System.out.println("           Задача №4 Целочисленный массив ");
-        int[] number1 = {1, 2, 3};
-        System.out.println(Arrays.toString(number1));
+        System.out.println(Arrays.toString(number));
 
         System.out.println("Все нечетные числа в массиве делаем четными: ");
-        for (int i = 0; i <= number1.length; i++) {
+        for (int i = 0; i <= number.length; i++) {
             if (i % 2 != 0) {
                 i++;
             }
@@ -71,12 +71,12 @@ public class Main {
         }
         System.out.println();
 
-        for (int i = 0; i < number1.length; i++) {
-            if (number1[i] % 2 != 0) {
-                number1[i]++;
+        for (int i = 0; i < number.length; i++) {
+            if (number[i] % 2 != 0) {
+                number[i]++;
             }
-            System.out.print(number1[i]);
-            if (number1[i] < 3) {
+            System.out.print(number[i]);
+            if (number[i] < 3) {
                 System.out.print(", ");
             }
         }
